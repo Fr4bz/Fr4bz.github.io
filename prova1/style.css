@@ -10,7 +10,7 @@ body{
 	box-sizing: border-box;
 }
 div{
-	border: 5px solid blue;
+	border: 5px solid white;
 	height: 100%;
 	width: 100%;
 	padding: 0px;
@@ -33,7 +33,6 @@ div{
 	display: grid;
 	grid-template-rows: 50% 50%;
 	grid-template-columns: 25% 25% 25% 25%;
-	background-color:lightblue;
 	padding: 0.5% 2% 0.5% 2%;
 	justify-items:center;
 	align-items:center;
@@ -41,21 +40,20 @@ div{
      
 }
 .GridElement{
-	height:98%;
-	width:98%;
+	height:94%;
+	width:94%;
 	justify-self: center;
 	align-self: center;
-	background-color:yellow;
 	border-radius: 10px;
-
+	box-shadow: 4px 0px 14px 0px black;
 }
 .GridElement.due{
 	grid-row: span 2;
-	height:99%;
+	height:97%;
 }
 .GridElement.tre{
 	grid-column: span 2;
-	width:99%;
+	width:97%;
 }
 
 h1{
