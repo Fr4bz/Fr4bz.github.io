@@ -55,7 +55,11 @@ div{
 	grid-column: span 2;
 	width:97%;
 }
-
+.GridElement:hover {
+    background-color: gray;
+    border-color: gray;
+    transition: 0.5s;
+}
 h1{
 	color: darkred;
 	font-family: cursive;
