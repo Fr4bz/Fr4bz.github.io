@@ -1,0 +1,59 @@
+html{
+	height:100%;
+	width:100%;
+	box-sizing: border-box;
+}
+body{
+	height:100%;
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+div{
+	border: 5px solid blue;
+	height: 100%;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+.GridContainer {
+	display: grid;
+	grid-template-rows: 20% 80%;
+	height:100%;
+}
+.GridHeader{
+	display: grid;
+	height:100%;
+    	justify-items:center;
+	align-items:center;
+}
+.GridBody{
+	height:100%;
+	display: grid;
+	grid-template-rows: 50% 50%;
+	grid-template-columns: 25% 25% 25% 25%;
+	/*padding: 0.5%;*/
+	background-color:lightblue;
+     
+}
+.GridElement{
+	height:100%;
+	width:100%;
+	justify-self: center;
+	align-self: center;
+	background-color:yellow;
+	border-radius: 10px;
+
+}
+.GridElement.due{
+	grid-row: span 2;
+}
+.GridElement.tre{
+	grid-column: span 2;
+}
+
+h1{
+	color: darkred;
+	font-family: cursive;
+}
