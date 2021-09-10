@@ -8,10 +8,11 @@
         if (!navbarCollapsible) {
             return;
         }
-        if (document.body.scrollTop < 80 || document.documentElement.scrollTop < 80) {
-            navbarCollapsible.classList.remove('navbar-shrink')
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            
+            navbarCollapsible.classList.add('navbar-shrink')
             
         } else {
-            navbarCollapsible.classList.add('navbar-shrink')
+            navbarCollapsible.classList.remove('navbar-shrink')
         }
     }
