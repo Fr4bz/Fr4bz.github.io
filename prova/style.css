@@ -1,6 +1,7 @@
 #mainNav {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    transition: 1s;
 }
 
 #mainNav.navbar-shrink {
