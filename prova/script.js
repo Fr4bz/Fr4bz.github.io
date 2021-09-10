@@ -7,7 +7,7 @@ window.onscroll = function() {scrollFunction()};
         if (!navbarCollapsible) {
             return;
         }
-        if (window.scrollY <= 500) {
+        if (window.scrollY === 000) {
             navbarCollapsible.classList.remove('navbar-shrink')
         } else {
             navbarCollapsible.classList.add('navbar-shrink')
