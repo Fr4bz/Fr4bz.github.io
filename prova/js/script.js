@@ -8,7 +8,7 @@
         if (!navbarCollapsible) {
             return;
         }
-        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        if (document.body.scrollTop < 80 || document.documentElement.scrollTop < 80) {
             navbarCollapsible.classList.remove('navbar-shrink')
             
         } else {
