@@ -1,9 +1,10 @@
-window.onscroll = function() {scrollFunction()};
 
 
+
+    window.onscroll = function() {scrollFunction()};
     // Navbar shrink function
     function scrollFunction() {
-        const navbarCollapsible = document.body.querySelector('#mainNav');
+        var navbarCollapsible = document.body.querySelector('#mainNav');
         if (!navbarCollapsible) {
             return;
         }
@@ -13,13 +14,4 @@ window.onscroll = function() {scrollFunction()};
         } else {
             navbarCollapsible.classList.add('navbar-shrink')
         }
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-              document.getElementById("navbar").style.padding = "30px 10px";
-            } else {
-              document.getElementById("navbar").style.padding = "80px 10px";
-            }
-          }
-        
-    };
+    }
