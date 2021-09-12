@@ -1674,7 +1674,7 @@ body [class*=" icon-"]:before {
 }
 #header .userMenuArea ul.usermenuList .usermenuCart aside:last-child {
     padding-bottom: 0;
-    margin-bottom: 10px;
+    margin-bottom: ;
 }
 #header .userMenuArea ul.usermenuList .usermenuCart .widgettitle {
     font-size: 20px;
