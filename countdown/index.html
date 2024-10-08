@@ -13,6 +13,64 @@ var countDownDate = new Date("Nov 30, 2024 22:59:59").getTime();
 
 document.addEventListener("DOMContentLoaded", (event) => {
 
+    for(let i=0; i <10; i++){
+            //     <div class="largeCircle" id="circ1">
+            //         <div class="largeCircle" id="circ1shadow"></div>
+            //     </div>
+            //     <div class="middleCircle" id="circ2">
+            //         <div class="middleCircle" id="circ2shadow"></div>
+            //     </div>
+            //     <div class="middleCircle" id="circ3">
+            //         <div class="middleCircle" id="circ3shadow"></div>
+            //     </div>
+            //     <div class="smallCircle" id="circ4"></div>
+            //     <div class="smallCircle" id="circ5">
+            //         <div class="smallCircle" id="circ5shadow"></div>
+            //     </div>
+            //     <div class="smallCircle" id="circ6">
+            //         <div class="smallCircle" id="circ6shadow"></div>
+            //     </div>
+        let circle=[];
+        let bigCloud=document.createElement("div");
+        snowFlake.classList.add('bigCloud');
+        for(j=0;j<=Math.floor(Math.random() * 7);j++){
+            let largeCircle=document.createElement('div');
+            largeCircle.classList.add('largeCircle')
+            if(Math.random()){
+                let circleShadow=document.createElement('div');
+                circleShadow.id='circ'+j+'shadow';
+                circleShadow.classList.add('smallCircle');
+                largeCircle.appendChild(circleShadow);
+            }
+            circle.add(largeCircle);
+        }
+        for(j=0;j<=Math.floor(Math.random() * 7);j++){
+            let middleCircle=document.createElement('div');
+            middleCircle.classList.add('middleCircle')
+            if(Math.random()){
+                let circleShadow=document.createElement('div');
+                circleShadow.id='circ'+j+'shadow';
+                circleShadow.classList.add('smallCircle');
+                middleCircle.appendChild(circleShadow);
+            }
+            circle.add(middleCircle);
+        }
+        for(j=0;j<=Math.floor(Math.random() * 7);j++){
+            let smallCircle=document.createElement('div');
+            smallCircle.classList.add('smallCircle');
+            if(Math.random()){
+                let circleShadow=document.createElement('div');
+                circleShadow.id='circ'+j+'shadow';
+                circleShadow.classList.add('smallCircle');
+                smallCircle.appendChild(circleShadow);
+            }
+            circle.add(smallCircle);
+        }
+        circle.sort(() => Math.random() - 0.5);
+        circle.forEach((element)=>{
+            document.getElementById('cloudPane').appendChild(element);
+        })
+    }
     for(let i=0; i <150; i++){
         let snowFlake=document.createElement("div");
         snowFlake.classList.add('snow');
@@ -47,6 +105,9 @@ var x = setInterval(function() {
 </head>
 <body>
 <div id="divSnow" class="divSnow"> 
+
+</div>
+<div class="cloudPane">
 
 </div>
 <div class="divContainer" style="width:100%; height:100%;">
