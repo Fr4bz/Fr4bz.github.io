@@ -66,10 +66,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
             }
             circle.push(smallCircle);
         }
-        circle.sort(() => Math.random() - 0.5);
-        circle.forEach((element)=>{
-            document.getElementById('cloudPane').appendChild(element);
-        })
+        if(circle.length>1){
+            circle.sort(() => Math.random() - 0.5);
+            circle.forEach((element)=>{
+                bigCloud.appendChild(element);
+            })
+            document.getElementById('cloudPane').appendChild(bigCloud);
+        }
     }
     for(let i=0; i <150; i++){
         let snowFlake=document.createElement("div");
