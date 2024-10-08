@@ -14,9 +14,9 @@ var countDownDate = new Date("Nov 30, 2024 23:59:59").getTime();
 document.addEventListener("DOMContentLoaded", (event) => {
 
     for(let i=0; i <50; i++){
-        let divSnow=document.createElement("div");
-        divSnow.classList.add('snow');
-        document.getElementById('divSnow').appendChild(divSnow);
+        let snowFlake=document.createElement("div");
+        snowFlake.classList.add('snow');
+        document.getElementById('divSnow').appendChild(snowFlake);
     }
 	// Aggiorna il countdown ogni secondo
 var x = setInterval(function() {
@@ -46,7 +46,7 @@ var x = setInterval(function() {
 </script>
 </head>
 <body>
-<div class="divSnow"> 
+<div id="divSnow" class="divSnow"> 
 
 </div>
 <div class="divContainer" style="width:100%; height:100%;">
