@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 circleShadow.classList.add('smallCircle');
                 largeCircle.appendChild(circleShadow);
             }
-            circle.add(largeCircle);
+            circle.push(largeCircle);
         }
         for(j=0;j<=Math.floor(Math.random() * 7);j++){
             let middleCircle=document.createElement('div');
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 circleShadow.classList.add('smallCircle');
                 middleCircle.appendChild(circleShadow);
             }
-            circle.add(middleCircle);
+            circle.push(middleCircle);
         }
         for(j=0;j<=Math.floor(Math.random() * 7);j++){
             let smallCircle=document.createElement('div');
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 circleShadow.classList.add('smallCircle');
                 smallCircle.appendChild(circleShadow);
             }
-            circle.add(smallCircle);
+            circle.push(smallCircle);
         }
         circle.sort(() => Math.random() - 0.5);
         circle.forEach((element)=>{
