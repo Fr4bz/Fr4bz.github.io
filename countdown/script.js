@@ -1,4 +1,4 @@
-const snowContainer = document.getElementById('snow-container');
+const snowContainer ;
 
 function createSnowflake() {
     const snowflake = document.createElement('div');
@@ -15,5 +15,10 @@ function createSnowflake() {
         snowflake.remove();
     }, 5000);
 }
+document.addEventListener("DOMContentLoaded", () => {
+    snowContainer= document.getElementById('snow-container');
+    setInterval(createSnowflake, 100);
 
-setInterval(createSnowflake, 100);
+})
+
+
