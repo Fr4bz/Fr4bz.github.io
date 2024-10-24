@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Advent Countdown</title>
+  
+  <link rel="stylesheet" href="./style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
+<script>
+var countDownDate = new Date("Nov 30, 2024 22:59:59").getTime();
+
+document.addEventListener("DOMContentLoaded", (event) => {
+
+    for(let i=0; i <10; i++){
+            //     <div class="largeCircle" id="circ1">
+            //         <div class="largeCircle" id="circ1shadow"></div>
+            //     </div>
+            //     <div class="middleCircle" id="circ2">
+            //         <div class="middleCircle" id="circ2shadow"></div>
+            //     </div>
+            //     <div class="middleCircle" id="circ3">
+            //         <div class="middleCircle" id="circ3shadow"></div>
+            //     </div>
+            //     <div class="smallCircle" id="circ4"></div>
+            //     <div class="smallCircle" id="circ5">
+            //         <div class="smallCircle" id="circ5shadow"></div>
+            //     </div>
+            //     <div class="smallCircle" id="circ6">
+            //         <div class="smallCircle" id="circ6shadow"></div>
+            //     </div>
+        let circle=[];
+        let bigCloud=document.createElement("div");
+        bigCloud.classList.add('bigCloud');
+        for(j=0;j<=Math.floor(Math.random() * 7);j++){
+            let largeCircle=document.createElement('div');
+            largeCircle.classList.add('largeCircle')
+            if(Math.random()){
+                let circleShadow=document.createElement('div');
+                circleShadow.id='circ'+j+'shadow';
+                circleShadow.classList.add('smallCircle');
+                largeCircle.appendChild(circleShadow);
+            }
+            circle.push(largeCircle);
+        }
+        for(j=0;j<=Math.floor(Math.random() * 7);j++){
+            let middleCircle=document.createElement('div');
+            middleCircle.classList.add('middleCircle')
+            if(Math.random()){
+                let circleShadow=document.createElement('div');
+                circleShadow.id='circ'+j+'shadow';
+                circleShadow.classList.add('smallCircle');
+                middleCircle.appendChild(circleShadow);
+            }
+            circle.push(middleCircle);
+        }
+        for(j=0;j<=Math.floor(Math.random() * 7);j++){
+            let smallCircle=document.createElement('div');
+            smallCircle.classList.add('smallCircle');
+            if(Math.random()){
+                let circleShadow=document.createElement('div');
+                circleShadow.id='circ'+j+'shadow';
+                circleShadow.classList.add('smallCircle');
+                smallCircle.appendChild(circleShadow);
+            }
+            circle.push(smallCircle);
+        }
+        if(circle.length>1){
+            circle.sort(() => Math.random() - 0.5);
+            circle.forEach((element)=>{
+                bigCloud.appendChild(element);
+            })
+            // document.getElementById('cloudPane').appendChild(bigCloud);
+        }
+    }
+    for(let i=0; i <150; i++){
+        let snowFlake=document.createElement("div");
+        snowFlake.classList.add('snow');
+        document.getElementById('divSnow').appendChild(snowFlake);
+    }
+	// Aggiorna il countdown ogni secondo
+var x = setInterval(function() {
+    // Ottieni la data e l'ora attuali
+    var now = new Date().getTime();
+
+    // Calcola la distanza tra ora e la data di fine
+    var distance = countDownDate - now;
+
+    // Calcola giorni, ore, minuti e secondi
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Visualizza il risultato nell'elemento con id="countdown"
+    document.getElementById("countdownTimer").innerHTML = days + "G " + hours + "H " + minutes + "M " + seconds + "S ";
+
+    // Se il countdown è finito, scrivi un messaggio
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdownTimer").innerHTML = "INIZIA A SPACCHETTARE";
+    }
+    },1000);
+});
+
+</script>
+</head>
+<body>
+<div id="divSnow" class="divSnow"> 
+
+</div>
+<div class="divContainer" style="width:100%; height:100%;">
+	<span class="mountains-of-christmas-bold" style="font-size:7em;     color: lightgray;">
+    Countdown
+    </span>
+    <span class="mountains-of-christmas-regular" id="countdownTimer" style="font-size:5em;     color: lightgray;">
+    0G 00h 00m
+    </span>
+    
+    
+</div>
+<div class="snowdrifts">
+<div class="drift drift-1"></div>
+<div class="drift drift-2"></div>
+<div class="drift drift-3"></div>
+</div>
+  
+</body>
+</html>
