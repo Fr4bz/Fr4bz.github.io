@@ -47,3 +47,19 @@ body {
     opacity: 0.8;
     pointer-events: none;
 }
+
+@keyframes fall {
+  0% {
+    top: -10px;
+    transform: translateX(0);
+  }
+  100% {
+    top: 100vh;
+    transform: translateX(100px); /* movimento orizzontale opzionale */
+  }
+}
+
+.snowflake {
+  animation-name: fall;
+  animation-timing-function: linear;
+}
