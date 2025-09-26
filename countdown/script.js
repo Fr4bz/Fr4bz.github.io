@@ -16,7 +16,7 @@ function createSnowflake() {
     }, 5000);
 }
 
-var countDownDate = new Date("Nov 30, 2024 22:59:59").getTime();
+var countDownDate = new Date("Dec 24, 2025 22:59:59").getTime();
 
 var x = setInterval(function() {
     // Ottieni la data e l'ora attuali
